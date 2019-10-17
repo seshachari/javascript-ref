@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Constructor Function</title>
+</head>
+
+<body>
+<h3>India national cricket team/Roster</h3>
+<script>
+function playerrank(){
+    if(this.runs>100 && this.runs<=200){
+        return "Grade A";
+    }
+    else if(this.runs>50 && this.runs<=100)
+    {
+        return "Grade B"
+    }
+    else{
+        return "Grade C"
+    }
+}
+
+ var players=[
+    {playerName:"Virat Kohli", role:"Batsman", runs:100, playerStatus:"Out", rank:playerrank},
+    {playerName:"MS Dhoni", role:"Wicket-Keeper", runs:150, playerStatus:"Not Out", rank:playerrank},
+    {playerName:"Rohit Sharma", role:"Batsman", runs:30, playerStatus:"Out", rank:playerrank},
+    {playerName:"Hardik Pandya", role:"All-Rounder", runs:150, playerStatus:"Out", rank:playerrank},
+    {playerName:"Ravichandran ", role:"Bowler", runs:70, playerStatus:"Not Out", rank:playerrank},
+    {playerName:"Rishabh Pant ", role:"Wicket-Keeper", runs:20, playerStatus:"Out", rank:playerrank},
+    {playerName:"Shikhar Dhawan", role:"Batsman", runs:190, playerStatus:"Out", rank:playerrank},
+ ];
+
+ for(var i=0; i<players.length; i++)
+ {
+     console.log(players[i].playerName);
+     console.log(players[i].role);
+     console.log(players[i].runs);
+     console.log(players[i].playerStatus);
+     console.log(players[i].rank());
+     console.log("-----------------------------------------------------");
+ }
+
+
+ var library = [ 
+   {
+       author: 'Bill Gates',
+       title: 'The Road Ahead',
+       readingCompleted: true
+   },
+   {
+       author: 'Steve Jobs',
+       title: 'Walter Isaacson',
+       readingCompleted: true
+   },
+   {
+       author: 'Suzanne Collins',
+       title:  'Mockingjay: The Final Book of The Hunger Games', 
+       readingCompleted: false
+   }];
+
+   for(var i=0; i<library.length; i++)
+   {
+       console.log(library[i].title);
+       console.log("---------------------------");
+   }
+
+   var student = {  name : "David Rayy",  sclass : "VI" };
+   console.log(Object.keys(student));
+
+var a={playerName:"Virat Kohli", role:"Batsman", runs:100, playerStatus:"Out", rank:playerrank};
+    var c=JSON.stringify(a);
+    var d = JSON.parse(c);
+    console.log(c);
+    console.log("---------------------------------------------");
+    console.log(d);
+
+</script>
+</body>
+
+</html>

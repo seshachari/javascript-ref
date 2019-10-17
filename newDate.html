@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>newDate</title>
+</head>
+
+<body>
+
+    <h2>Date Functions</h2>
+   <h4>new Date</h4>
+   <h4>toLocaleDateString()</h4>
+   <p>M/D/Y format</p>
+
+   <h4>toLocaleTimeString()</h4>
+    <p>h:m:s</p>
+
+<h4>getTime()</h4>
+
+<h4>getDay()</h4>
+<p>0=Sunday, 1=Monday,------ 6=Saturday</p>
+
+<h4>getDate() & getMonth & getFullYear </h4>
+
+<h4> getHours(), getMinutes(), getSeconds(), getMilliseconds() </h4>
+
+<h4>custom date</h4>
+
+
+
+<p></p>
+    <script>
+        var a= new Date();
+        var dayName=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday"];
+        var monthName=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        
+        console.log(a);
+        console.log("----------------------------------");
+        
+        var b=a.toLocaleDateString();
+        console.log(b);
+        console.log("----------------------------------");
+
+        var c=a.toLocaleTimeString();
+        console.log(c);
+        console.log("----------------------------------");
+
+        var d=a.getTime();
+        console.log(d);
+        console.log("----------------------------------");
+
+        var e=a.getDay();
+        console.log(dayName[e]);
+        console.log("----------------------------------");
+
+        var f=a.getDate();
+        console.log(f);
+        console.log("----------------------------------");
+
+        var g=a.getMonth();
+        console.log(monthName[g]);
+        console.log("----------------------------------");
+
+        var h=a.getFullYear();
+        console.log(h);
+        console.log("----------------------------------");
+
+        var i=a.getHours();
+        console.log(i);
+        console.log("----------------------------------");
+
+        var j=a.getMinutes();
+        console.log(j);
+        console.log("----------------------------------");
+
+        var k=a.getSeconds();
+        console.log(k);
+        console.log("----------------------------------");
+
+        var l=a.getMilliseconds();
+        console.log(l);
+        console.log("----------------------------------");
+
+        var m=a.setFullYear(1984);
+        var n=a.setMonth(6);
+        var o=a.setDate(25);
+        console.log(a.toLocaleDateString());
+        console.log("----------------------------------");
+
+
+     
+</script>
+</body>
+
+
+</html>

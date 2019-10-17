@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>if-esle-assignment</title>
+    <style>
+        .section-block { padding: 20px; }
+
+        .section-block h2 {         font-size: 18px;      }
+
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>if-esle-assignment</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <h4>1. Write a program to check a number is divisible by 7 or not</h4>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="divisible" value=""
+                                            placeholder="Enter Value">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3"> <button class="btn btn-default"
+                                        onclick="divisible()">Submit</button></div>
+                                <div class="col-sm-3">
+                                    <div id="resultOfdivisible"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="col">
+    
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>2.	Write a program to check a number is factor of 84 or not </h4>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="factor" value=""
+                                                placeholder="Enter Value">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3"> <button class="btn btn-default"
+                                            onclick="factor()">Submit</button></div>
+                                    <div class="col-sm-3">
+                                        <div id="resultOFactor"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="row">
+                    <div class="col">
+    
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>3. Write a program to check a number is multiple of 3 or not </h4>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="multiple" value=""
+                                                placeholder="Enter Value">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3"> <button class="btn btn-default"
+                                            onclick="multipleOf()">Submit</button></div>
+                                    <div class="col-sm-3">
+                                        <div id="resultOfMultiple"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col">
+        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>4.	Write a program to check a number is positive or not </h4>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="positive" value="" placeholder="Enter Value">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3"> <button class="btn btn-default"
+                                                onclick="positiveNum()">Submit</button></div>
+                                        <div class="col-sm-3">
+                                            <div id="resultOfPositive"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col">
+            
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>5.	Write a program to check a number is having 4 at units place </h4>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="units" value="" placeholder="Enter Value">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3"> <button class="btn btn-default"
+                                                    onclick="unitsPlace()">Submit</button></div>
+                                            <div class="col-sm-3">
+                                                <div id="resultOfUnitsPlace"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="row">
+                            <div class="col">
+            
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>6.	Write a program to check a number is 3digited number or not  </h4>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="digit" value="" placeholder="Enter Value">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3"> <button class="btn btn-default"
+                                                    onclick="digitLenth()">Submit</button></div>
+                                            <div class="col-sm-3">
+                                                <div id="resultOfdigitLenth"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="row">
+                            <div class="col">
+            
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>7.	Write a program to print even or odd for a given number </h4>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="evenVal" value="" placeholder="Enter Value">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3"> <button class="btn btn-default"
+                                                    onclick="evenOdd()">Submit</button></div>
+                                            <div class="col-sm-3">
+                                                <div id="resultOfevenOdd"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="row">
+                            <div class="col">
+            
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>8.	Write a program to print the greatest number in given two numbers </h4>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="firstNum" value="" placeholder="Enter First Number">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="form-group">
+                                                <input type="text" class="form-control" id="secondNum" value="" placeholder="Enter Second Number">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3"> <button class="btn btn-default"
+                                                    onclick="greatestNumTwo()">Submit</button></div>
+                                            <div class="col-sm-3">
+                                                <div id="resultOfgreatestNumTwo"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>9. Write a program to print the least number in given two numbers</h4>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="firstNumLeast" value="" placeholder="Enter First Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                            <input type="text" class="form-control" id="secondNumLeast" value="" placeholder="Enter Second Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3"> <button class="btn btn-default"
+                                                onclick="leastNumTwo()">Submit</button></div>
+                                        <div class="col-sm-3">
+                                            <div id="resultOfleastNumTwo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                </div>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            function divisible() {
+                var inputVal = document.getElementById('divisible').value;
+                if (inputVal % 7 == 0) {
+                    document.getElementById('resultOfdivisible').textContent = 'Divisible is True';
+                }
+                else {
+                    document.getElementById('resultOfdivisible').textContent = 'Divisible is Fasle';
+
+                }
+
+            }
+            //Factor
+            function factor() {
+                var inputVal = document.getElementById('factor').value;
+                if (84 % inputVal == 0) {
+                    document.getElementById('resultOFactor').textContent = inputVal+' Yes This is factor of 84';
+                }
+                else {
+                    document.getElementById('resultOFactor').textContent = inputVal+' This not factor of 84';
+
+                }
+
+            }
+
+            // function calculate(num) {
+            //     var str = "0";
+            //     for (var i = 1; i <= num; i++) {
+            //         if (num % i == 0) {
+            //             str += ',' + i;
+            //         }
+            //     }
+            //     alert(str);
+            // }
+            // calculate(84);
+
+            //
+            
+            //multipleOf 
+            function multipleOf() {
+                var inputVal = document.getElementById('multiple').value;
+                if ( inputVal % 3 == 0) {
+                    document.getElementById('resultOfMultiple').textContent = inputVal+' Yes This is multiple of 3';
+                }
+                else {
+                    document.getElementById('resultOfMultiple').textContent = inputVal+' This not multiple of 3';
+
+                }
+
+            }
+            // positive or not 
+            function positiveNum() {
+                var inputVal = document.getElementById('positive').value;
+                if ( inputVal >= 0) {
+                    document.getElementById('resultOfPositive').textContent = inputVal+' This Number is Positive';
+                }
+                else {
+                    document.getElementById('resultOfPositive').textContent = inputVal+' This Number is Negative';
+
+                }
+            }
+
+            // units place
+            function unitsPlace() {
+                var inputVal = document.getElementById('units').value;
+                var digit=inputVal.toString()[0];
+                if ( digit == '4') {
+                    document.getElementById('resultOfUnitsPlace').textContent = inputVal+' true';
+                    console.log('true');
+                }
+                else {
+                    document.getElementById('resultOfUnitsPlace').textContent = inputVal+' false';
+                    console.log('false');
+                }
+            }
+            // 3digited
+            function digitLenth() {
+                var inputVal =Number(document.getElementById('digit').value.length);
+               // var digitlength=inputVal.length;
+                console.log(inputVal);
+                if ( inputVal == 3) {
+                    document.getElementById('resultOfdigitLenth').textContent = inputVal+' This Number is 3digited';
+                    
+                }
+                else {
+                     document.getElementById('resultOfdigitLenth').textContent = inputVal+' This Number is More than 3digits';
+                    
+                }
+            }
+
+            // evenOdd
+            function evenOdd() {
+                var inputVal = Number(document.getElementById('evenVal').value);
+               
+                if ( inputVal % 2 == 0 ) {
+                    document.getElementById('resultOfevenOdd').textContent = inputVal+' This Number is Even';
+                    console.log(inputVal % 2  );
+                    
+                }
+                else {
+                    document.getElementById('resultOfevenOdd').textContent = inputVal+' This Number is Odd';
+                    console.log(inputVal % 2 );
+                }
+            }
+            // greatestNumTwo
+            function greatestNumTwo() {
+                var fistNumVal = Number(document.getElementById('firstNum').value);
+                var secondNumVal = Number(document.getElementById('secondNum').value);
+               
+                if ( fistNumVal > secondNumVal ) {
+                    document.getElementById('resultOfgreatestNumTwo').textContent = 'Greatest Number Is '+fistNumVal;
+                                     
+                }
+                else {
+                    document.getElementById('resultOfgreatestNumTwo').textContent = 'Greatest Number Is '+secondNumVal;
+                }
+            }
+             // LeastNumTwo
+            function leastNumTwo() {
+                var firstNumLeast = Number(document.getElementById('firstNumLeast').value);
+                var secondNumLeast = Number(document.getElementById('secondNumLeast').value);
+               
+                if ( firstNumLeast < secondNumLeast ) {
+                    document.getElementById('resultOfleastNumTwo').textContent = 'Least Number Is '+firstNumLeast;
+                                     
+                }
+                else {
+                    document.getElementById('resultOfleastNumTwo').textContent = 'Least Number Is '+secondNumLeast;
+                }
+            }
+
+            
+
+        </script>
+</body>
+
+</html>

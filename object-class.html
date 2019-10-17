@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Objects</title>
+    <style>
+        .section-block { padding: 20px; }
+
+        .section-block h2 {         font-size: 18px;      }
+
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Objects</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                 
+                </div>
+            </div>
+
+            
+               
+              
+                  
+                  
+                  
+                   
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+          var employee=[
+              {"name":"Naresh","age":"34", "id":"Rp00012", "designation":"UI & UX Designer & Developer ", "address":{"housenumber":"8-3-228", "street":"Ameerpet","State":"Telangana", "pincode":500016} },
+              {"name":"Mallesh","age":"38", "id":"Rp0002", "designation":"HR ", "address":{"housenumber":"12311414", "street":"SR Nagar","State":"AP", "pincode":500018} },
+              {"name":"Govind","age":"28", "id":"Rp00030", "designation":"Developer", "address":{"housenumber":"123", "Sri Nagar":"Ameerpet","State":"Telangana", "pincode":500016} },
+              {"name":"Sravanthi","age":"39", "id":"Rp00018", "designation":"Developer ", "address":{"housenumber":"8-3-228", "street":"Ameerpet","State":"Telangana", "pincode":500016} }
+          ]
+        //   console.log(employee);
+        //   console.log(employee.age);
+        //   console.log(employee.designation);
+        //   var name="name";
+        //   console.log(employee[name]);
+        // for(k in employee){
+        //     console.log(k+': ', employee[k]);
+        //     console.log("-----------------------------------");
+            // console.log(k, employee.address['housenumber']);
+            
+        //}
+        // for(j in employee.address){
+        //         console.log(j+': ', employee.address[j]);
+        //     }
+        // console.log(employee.address['housenumber']);
+        for(let i=0; i<employee.length; i++){
+           for(k in employee[i]){
+                console.log(employee[i][k]);
+           }
+           for(j in employee[i].address){
+            console.log(j+': ', employee[i].address[j]);
+           }
+           console.log("-----------------------------------------------------------------------------------------");
+        }
+        </script>
+</body>
+
+</html>

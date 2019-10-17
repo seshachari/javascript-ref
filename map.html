@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Map</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>map</h2>
+                    <p>The map() method creates a new array with the results of calling a function for every array elements.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    
+
+                    <div class="form-group">
+                        <label>Multiply with</label>
+                        <input type="text" class="form-control" id="multiplayVal" value="">
+                      </div>
+                    
+                </div>
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> New array</label>
+                                <p id="result-block"></p>
+                         </div>
+                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary" onclick="getMap()">Check map()</button>
+                </div>
+            </div>
+    </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            var x=[20,12,45,87,8,15,6];
+            x.map(function(a,b,c){console.log("map method",a,b,c);});
+
+            var number=[20,15,8,10,19,8];
+
+            function arrayMultiplay(num)
+            {
+                var gatInpuVal=document.getElementById("multiplayVal").value;
+                return num*gatInpuVal;   
+            }  
+
+            function getMap(){
+                document.getElementById("result-block").innerHTML=number.map(arrayMultiplay);
+                console.log(number.map(arrayMultiplay));
+            }
+        // New Examples for map method
+
+        var tasks = [
+                        {'name'     : 'To Create New Angular Project', 'duration' : 120},
+                        {'name'     : 'UI Issues Testing', 'duration' : 60},
+                        {'name'     : 'Build for Demo', 'duration' : 240}
+                    ];
+
+          var taskNames=tasks.map(function(task, index, array){
+              return task.name;
+          });          
+          console.log(taskNames);
+
+          var employee=[
+                            {"name":"Naresh","des":"UI Developer and Team Lead", "age":"34"},
+                            {"name":"Mallesh","des":"HR and Admin", "age":"38"},
+                            {"name":"Chari","des":"Mobile Developer", "age":"27"},
+                            {"name":"Govind","des":"PHP & Angular Developer", "age":"26"}
+                        ];
+            var empNames=employee.map(function(emp,index,array){
+                return emp.name;
+            });
+        console.log(empNames);
+        console.log("--------------------------------------");
+        var empDes=employee.map(function(empdes, index, array){
+            return empdes.des;
+        });
+
+        console.log(empDes);
+
+        </script>
+</body>
+</html>

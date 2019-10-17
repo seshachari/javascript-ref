@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Objects</title>
+    <style>
+        .section-block { padding: 20px; }
+
+        .section-block h2 {         font-size: 18px;      }
+
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Objects</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                 
+                </div>
+            </div>
+
+            
+               
+              
+                  
+                  
+                  
+                   
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+          var family=[
+                        {
+                            "familyname":"Bolakonda",
+                            "familyowner":"Dhamodar",
+                            "mother":"Saraswathi",
+                            "childs":2,
+                            "child1":{
+                                "name":"Sampath",
+                                "designation":"Fashion Designer",
+                                "marital status":true,
+                                "location":"Warangal",
+                                "wifename":"Rajitha",
+                                "age":40
+                            },
+                            "child2":{
+                                "name":"Naresh",
+                                "designation":"UI Designer & Developer",
+                                "marital status":true,
+                                "location":"Hyderbad",
+                                "wifename":"Ravali",
+                                "age":34
+                            }
+                        },
+                        {
+                            "familyname":"Ramagiri",
+                            "familyowner":"Ravi",
+                            "mother":"Srilatha",
+                            "childs":2,
+                            "child1":{
+                                "name":"Ravali",
+                                "designation":"House Wife",
+                                "marital status":true,
+                                "location":"Hyderbad",
+                                "husband":"Naresh",
+                                "age":24
+                            },
+                            "child2":{
+                                "name":"Bhanu",
+                                "designation":"Student",
+                                "marital status":false,
+                                "location":"Warangal",
+                                "age":20
+                                
+                            }
+                        }
+
+
+          ];
+
+          var employee=[
+              {"name":"Naresh","age":"34", "id":"Rp00012", "designation":"UI & UX Designer & Developer ", "address":{"housenumber":"8-3-228", "street":"Ameerpet","State":"Telangana", "pincode":500016} },
+              {"name":"Mallesh","age":"38", "id":"Rp0002", "designation":"HR ", "address":{"housenumber":"12311414", "street":"SR Nagar","State":"AP", "pincode":500018} },
+              {"name":"Govind","age":"28", "id":"Rp00030", "designation":"Developer", "address":{"housenumber":"123", "Sri Nagar":"Ameerpet","State":"Telangana", "pincode":500016} },
+              {"name":"Sravanthi","age":"39", "id":"Rp00018", "designation":"Developer ", "address":{"housenumber":"8-3-228", "street":"Ameerpet","State":"Telangana", "pincode":500016} }
+          ]
+
+         
+
+        for(let i=0; i<family.length; i++){
+            
+            for(k in family[i]){
+                console.log(k+": ", family[i][k]);
+            }
+           
+            for(j in family[i].child1){
+                console.log(j+": ",family[i].child1[j]);
+               
+            }
+
+           
+            
+            console.log("-----------------------------------------------------------------------------------");
+            if(family[i].child1.age<=20)
+            {
+                console.log( family[i].child1[j]);
+            }
+        }
+        // console.log(family);
+       
+       for(let j=0; j<employee.length; j++)
+       {
+        // console.log(employee[j]);
+        if(employee[j].age>30)
+        {
+            console.log(employee[j].name);
+        }
+       }
+       
+        
+        </script>
+</body>
+
+</html>

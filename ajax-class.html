@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>AJAX</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+        .highlight{     margin-bottom: 1rem;  background-color: #f7f7f9;     padding: 1.5rem;}
+<<<<<<< HEAD
+     h4 {  font-size: 16px; color: #0062cc; }
+=======
+     h4 {  font-size: 16px;        color: #0062cc;        }
+>>>>>>> a517e295f474265a05bfae393ca0418893b034b3
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>ajax</h2>
+                  
+                    <div class="highlight">
+                        <h3>AJAX Introduction</h3>
+                            <ul>
+                                <li>Read data from a web server - after the page has loaded</li>
+                                <li>Update a web page without reloading the page</li>
+                                <li>Send data to a web server - in the background</li>
+                            </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                
+              
+
+
+                <div class="col-sm-12">
+                   <h2>The XMLHttpRequest Obeject</h2>
+                   <button class="btn btn-light" onclick="onAjaxload()">onLoad Content Change</button>
+                   <p id="ajaxDemo"></p>
+                   
+                </div>
+              
+              
+            </div>
+           
+    </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+           function loadData(){
+               var country=document.getElementById("country").value;
+               console.log(country);
+               var xhttp=new XMLHttpRequest();
+               xhttp.onreadystatechange=function(){
+                /* 
+                    0: request not initialized
+                    1: server connection established
+                    2: request received 
+                    3: processing requist 
+                    4: request finished and response is ready
+                */
+                if(xhttp.readyState===4 && this.status === 200){
+                    var responseData=xhttp.responseText;
+                    var jsonData=JSON.parse(responseData);
+                    var capital=jsonData[0].capital;
+                    document.getElementById("capital").innerHTML=capital;
+                }
+               }
+               xhttp.open("GET","https://restcountries.eu/rest/v2/name/"+country+"?fullText=true", true);
+               xhttp.send();
+           }
+        
+        function onAjaxload(){
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function(){
+               if(this.readyState==4 && this.status==200){
+                   document.getElementById("ajaxDemo").innerHTML=this.responseText;
+               }
+            }
+            xhttp.open("GET","ajaxsample.txt", true);
+            xhttp.send();
+            console.dir(xhttp);
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>sort</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+        .highlight{     margin-bottom: 1rem;  background-color: #f7f7f9;     padding: 1.5rem;}
+     h4 {  font-size: 16px; color: #0062cc; }
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>sort</h2>
+                    <p>
+                        The sort() method sorts an array alphabetically: 
+                    </p>
+                    <h4>Syntax</h4>
+                    <div class="highlight">
+                        array.sort( );
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-12">
+                    <h4>Example</h4>
+               </div>
+                  
+
+
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> Array</label>
+                                <p id="res-block"></p>
+                         </div>
+                   
+                </div>
+               
+                <div class="col-sm-3">
+                    <button class="btn btn-default" onclick="sortMethod()">Click here</button>
+                </div>
+                <div class="col-sm-12"><hr></div>
+             
+              
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                     <h4>Example</h4>
+                </div>
+                   
+ 
+ 
+                 <div class="col-sm-12">
+                         <div class="form-group">
+                                 <label> Array</label>
+                                 <p id="emp-block"></p>
+                          </div>
+                    
+                 </div>
+                
+                 <div class="col-sm-3">
+                     <button class="btn btn-default" onclick="sortMethodEmp()">Click here</button>
+                 </div>
+                 <div class="col-sm-12"><hr></div>
+              
+               
+             </div>
+           
+           
+            
+           
+    </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            function Jobseeker(jname, jgraduation, jexp ){
+                this.name=jname;
+                this.qualification=jgraduation;
+                this.exprience=jexp;
+            }
+        
+            function Employee(ename,egraduation,exp,eid,edes)
+            {
+                Jobseeker.call(this,ename,egraduation,exp);
+                this.empId=eid;
+                this.designation=edes;
+            }
+            var emp1=new Employee("Naresh","Graduation", 10,"Rp0012","UI Lead");
+            var emp2=new Employee("Mallesh","MCA", 10,"Rp001","HR, Admin, ID Manager");
+            var emp3=new Employee("Chari","B.Tech", 6,"Rp0013","Developer");
+            var j=JSON.stringify(emp3);
+            var p=JSON.parse(j);
+            console.log(emp1);
+            console.log("--------------------------------------------------------");
+            console.log(emp2);
+            console.log("--------------------------------------------------------");
+            console.log(emp3);
+            console.log("--------------------------------------------------------");
+            console.log(j+'---- JSON.stringify');
+            console.log("--------------------------------------------------------");
+            console.log(p);
+        
+        </script>
+</body>
+</html>

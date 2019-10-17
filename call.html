@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Constructor Function</title>
+</head>
+
+<body>
+<h3>Constructor Function</h3>
+<script>
+    function Jobseeker(jname, jgraduation, jexp ){
+        this.name=jname;
+        this.qualification=jgraduation;
+        this.exprience=jexp;
+    }
+
+    function Employee(ename,egraduation,exp,eid,edes)
+    {
+        Jobseeker.call(this,ename,egraduation,exp);
+        this.empId=eid;
+        this.designation=edes;
+    }
+    var emp1=new Employee("Naresh","Graduation", 5,"Rp0012","UI Lead");
+    var emp2=new Employee("Mallesh","MCA", 10,"Rp001","HR, Admin, ID Manager");
+    var emp3=new Employee("Chari","B.Tech", 6,"Rp0013","Developer");
+    var j=JSON.stringify(emp3);
+    var p=JSON.parse(j);
+    console.log(emp1);
+    console.log("--------------------------------------------------------");
+    console.log(emp2);
+    console.log("--------------------------------------------------------");
+    console.log(emp3);
+    console.log("--------------------------------------------------------");
+    console.log(j+'---- JSON.stringify');
+    console.log("--------------------------------------------------------");
+    console.log(p);
+
+</script>
+</body>
+
+</html>

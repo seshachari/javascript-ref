@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Date</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+        .highlight{     margin-bottom: 1rem;  background-color: #f7f7f9;     padding: 1.5rem;}
+     h4 {  font-size: 16px; color: #0062cc; }
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Date</h2>
+                    <p>
+                            JavaScript Date Output - By default, JavaScript will use the browser's time zone and display a date as a full text string:
+                      <br>
+                      <strong id="showDate"></strong>
+
+
+                    </p>
+                    <h4>Syntax</h4>
+                    <div class="highlight">
+<pre>new Date();
+new Date(year, month, day, hours, minutes, seconds, milliseconds);
+new Date(milliseconds);
+new Date(date string);
+</pre>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-12">
+                    <h4>Example</h4>
+               </div>
+                  
+
+
+                <div class="col">
+                        <div class="form-group">
+                                <label> Date</label>
+                                <p id="res-block"></p>
+                         </div>
+                   
+                </div>
+               
+               
+                <div class="col-sm-12"><hr></div>
+             
+              
+            </div>
+
+        
+           
+           
+            
+           
+    </div>
+<!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            var date=new Date("06-07-1985");
+            document.getElementById("showDate").innerHTML=date;
+            document.getElementById("res-block").innerHTML=date.getFullYear();
+            console.log(date.getFullYear());
+            
+        </script>
+</body>
+</html>

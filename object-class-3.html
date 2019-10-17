@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Objects</title>
+    <style>
+        .section-block { padding: 20px; }
+
+        .section-block h2 {         font-size: 18px;      }
+
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Objects</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                 
+                </div>
+            </div>
+
+            
+               
+              
+                  
+                  
+                  
+                   
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+         var employee=[
+                            {"department":"Designers","team":4, 
+                                "teamnames":[
+                                            {"name":"Naresh","designation":"UI & UX Designer","age":32},
+                                            {"name":"Rajesh","designation":"UI & UX Designer Developer","age":34},
+                                            {"name":"Mahendar","designation":"UI Developer","age":30},
+                                            {"name":"Sathpal","designation":"UI Developer","age":26}
+                                            ]
+                            },
+                            {"department":"PHP Developer","team":6, 
+                                "teamnames":[
+                                            {"name":"Chari","designation":"Sr Developer","age":27},
+                                            {"name":"Sravanthi","designation":"Wp Developer","age":38},
+                                            {"name":"Govind","designation":"Wp Developer & Developer","age":26},
+                                            {"name":"Hari","designation":"Fullstock Developer","age":30}
+                                            ]
+                            }
+                        ];
+        
+//    console.log(employee[0].teamnames[3].age);
+   for(let i=0; i<employee.length; i++)
+   {
+        // console.log(employee[i]);
+        for(k in employee[i]){
+            console.log(k+":", employee[i][k]);
+        }
+        for(j in employee[i].teamnames){
+                // console.log(j+":", employee[i][k][j].age);
+                if(employee[i][k][j].age<30)
+                {
+                    console.log(j+":", employee[i][k][j].name);
+                    console.log("--------------------------------------------------------");
+                } 
+                if(employee[i][k][j].designation=="UI Developer")
+                {
+                    console.log(j+":", employee[i][k][j].name);
+                    console.log("--------------------------------------------------------");
+                }
+                if(employee[i][k][j].designation=="Sr Developer")
+                {
+                    console.log(k,j+":", employee[i].department);
+                    console.log("--------------------------------------------------------");
+                }
+        }
+       
+        
+      
+         
+        
+   }
+ 
+  
+
+
+        </script>
+</body>
+
+</html>

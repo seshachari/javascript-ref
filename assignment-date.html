@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>newDate</title>
+</head>
+
+<body>
+
+    <h2>Assignment</h2>
+   
+    <script>
+        var a= new Date();
+        var dayName=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday"];
+      //  var monthName=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+        var toDay=a.getDay();
+        var todayName=dayName[toDay];
+        console.log("Today is: "+todayName);
+        console.log("----------------------------------");
+
+        var cTime=a.toLocaleTimeString();
+        console.log(cTime);
+
+
+
+      
+     
+</script>
+</body>
+
+
+</html>

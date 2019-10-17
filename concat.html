@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>concat</title>
+</head>
+
+<body>
+    <h4>concat</h4>
+    
+    <script>
+        var a='Welcome to RPWebapps';
+        var b='Naresh';
+        var c=a.concat(b);
+        
+        console.log(c);
+        console.log(typeof c);
+        
+        function reverseString(str) {
+        if (str === ""){
+            return "";
+        }
+           
+        else
+        {
+            return reverseString(str.substr(1)) + str.charAt(0);
+                              
+
+        }
+           
+        }
+
+       var d=reverseString("hello");
+       console.log(d);
+
+        function reverseStringVal(abc){
+            if(abc==="")
+            {
+                return "";
+               
+            }
+            else{
+               
+                return reverseStringVal(abc.substr(1))+abc.charAt(0);;
+               
+            }
+            
+
+        }
+
+    var name= reverseStringVal("hello"); 
+    console.log(name);
+    
+
+
+
+     
+</script>
+</body>
+
+
+</html>

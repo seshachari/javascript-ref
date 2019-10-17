@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>forEach</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+        .highlight{     margin-bottom: 1rem;  background-color: #f7f7f9;     padding: 1.5rem;}
+     h4 {  font-size: 16px;        color: #0062cc;        }
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>forEach</h2>
+                    <p>.forEach() is an inbuilt function in JavaScript which executes a given function once for each given array's element. </p>
+                    <h4>Syntax</h4>
+                    <div class="highlight">
+                        typedarray.forEach(callback)
+                    </div>
+                    <h4>Parameter</h4>
+                    <p>It accepts a parameter "callback" function which produce each element of the new typedArray and this function takes three parameter.</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-sm-3">
+                    
+
+                    <div class="form-group">
+                        <label>Multiply with</label>
+                        <input type="text" class="form-control" id="multiplayVal" value="">
+                      </div>
+                    
+                </div> -->
+                <div class="col-sm-3">
+                    <div class="form-group">
+                            <label> Original array</label>
+                            <p id="array-block"></p>
+                     </div>
+               
+            </div>
+
+
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> New array</label>
+                                <p id="result-block"></p>
+                         </div>
+                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary" onclick="items.forEach(arrayPrint)">Check forEach()</button>
+                </div>
+            </div>
+    </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            var items=[20,12,45,87,8,15,6]; // Original array 
+            demoP=document.getElementById("result-block");
+            var multiplayVal=document.getElementById("multiplayVal").value;
+           function arrayPrint(item, index)
+           {
+            demoP.innerHTML= demoP.innerHTML + "index[" + index + "]: " + item+ "<br>"; 
+
+            
+           }
+           var a=[2,4,6,8,9,70];
+          
+           function callBack(element, index, array){
+               document.write("a["+ index +"]="+ element + "<br>");
+           }
+           a.forEach(callBack);
+
+
+        //  function originalArrayPrint(ele, index, array){
+        //     document.getElementById("array-block").innerHTML=document.getElementById.innerHTML+ele;
+        //  }
+        //  items.forEach(originalArrayPrint);
+
+           
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Constructor Function</title>
+</head>
+
+<body>
+<h3>Constructor Function</h3>
+<script>
+    function Employee(name, empid, des, doj){
+        this.empName=name;
+        this.empId=empid;
+        this.designation=des;
+        this.dateJoin=doj
+        this.currentYear=2019
+        this.empExp=function(){
+            var totalExp=this.currentYear - this.dateJoin;
+            return totalExp;
+        }
+    }
+    Employee.prototype.getCompanyName=function(){
+        return "Rpwebapps";
+    }
+    var emp=new Employee("Naresh", "Rp001", "UI Lead", 2009);
+    var emp2=new Employee("Mallesh", "Rp002", "Admin", 2008);
+    var emp3=new Employee("Chari", "Rp003", "Developer", 2014);
+ 
+    // var k=Object.keys(emp);
+    // for(var i=0; i<k.length; i++){
+    //     console.log(emp2[k[i]]);
+    // }
+console.log(emp2.getCompanyName());
+console.log(emp3.getCompanyName());
+console.log("--------------------------------");
+console.log(emp3);
+    
+
+</script>
+</body>
+
+</html>

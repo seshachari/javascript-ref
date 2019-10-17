@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>filter</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+        .highlight{     margin-bottom: 1rem;  background-color: #f7f7f9;     padding: 1.5rem;}
+     h4 {  font-size: 16px; color: #0062cc; }
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>filter</h2>
+                    <p>arr.filter() function is used to create a new array from a given array consisting of only those elements from the given array which satisfy a 
+                        condition st by the argument function </p>
+                    <h4>Syntax</h4>
+                    <div class="highlight">
+                        var newArray=arr.filter(arg_function[, this_arg]);
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-sm-3">
+                    
+
+                    <div class="form-group">
+                        <label>Multiply with</label>
+                        <input type="text" class="form-control" id="multiplayVal" value="">
+                      </div>
+                    
+                </div> -->
+              
+
+
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> Array</label>
+                                <p id="res-block2"></p>
+                         </div>
+                   
+                </div>
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> Array</label>
+                                <p id="res-block"></p>
+                         </div>
+                   
+                </div>
+              
+            </div>
+           
+    </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            var abc=[-10,20,12,-1,8,-3,4,45];
+            function isNegative(element, index, array){
+                return element < 0;
+            }
+            var res=abc.filter(isNegative);
+            document.getElementById("res-block").innerHTML=res;
+            var emp=[
+                    {"name":"Naresh","des":"UI Lead","age":32},
+                    {"name":"Mallesh","des":"Tech Admin & HR","age":38},
+                    {"name":"Chari","des":"Mobile","age":27},
+                    {"name":"Sravanthi","des":"Wordpress Pulgin","age":38},
+                ];
+            function isAgebelow(element, index, array){
+                 return element.age<30;
+            }
+            var filteredRes=emp.filter(isAgebelow);
+            document.getElementById("res-block2").innerHTML="["+filteredRes[0].name+"]";
+            console.log(filteredRes[0].name);
+    </script>
+</body>
+</html>

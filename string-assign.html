@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>concat</title>
+</head>
+
+<body>
+ <h4>Assignment </h4>
+    
+<script>
+function titleCase(str){
+var splitStrVal=str.toLowerCase().split(' ');
+for(var i=0; i<splitStrVal.lenght; i++)
+{
+    splitStrVal[i]=splitStrVal[i].charAt(0).toUpperCase() + splitStrVal[i].substr(0);
+    
+    
+}
+
+
+return splitStrVal.join(' ');
+
+
+}
+var stringVal= titleCase("hello how are you");
+console.log(stringVal);
+
+
+</script>
+            
+
+</body>
+
+
+</html>

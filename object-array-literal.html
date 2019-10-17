@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Constructor Function</title>
+</head>
+
+<body>
+<h3>Object  Literal Function</h3>
+<script>
+    function Employee(name, empid, des, doj){
+        this.empName=name;
+        this.empId=empid;
+        this.designation=des;
+        this.dateJoin=doj
+        this.currentYear=2019
+        this.empExp=function(){
+            var totalExp=this.currentYear - this.dateJoin;
+            return totalExp;
+        }
+    }
+    var employee=[
+        new Employee("Naresh", "Rp001", "UI Lead", 2009),
+        new Employee("Mallesh", "Rp002", "Admin", 2008),
+        new Employee("Chari", "Rp003", "PHP Developer", 2014),
+        new Employee("Sravanthi", "Rp004", "Wordpress Manager", 2012),
+        new Employee("Bhanu", "Rp005", ".Net Developer", 2010),
+    ];
+    for(var i=0; i<employee.length; i++){
+        console.log(employee[i].empName);
+        console.log(employee[i].empId);
+        console.log(employee[i].designation);
+        console.log(employee[i].empExp());
+        console.log("------------------------");
+        
+    }
+        
+
+ 
+  
+
+    
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>filter</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+        .highlight{     margin-bottom: 1rem;  background-color: #f7f7f9;     padding: 1.5rem;}
+     h4 {  font-size: 16px;        color: #0062cc;        }
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>filter</h2>
+                    <p>arr.filter() function is used to create a new array from a given array consisting of only those elements from the given array which satisfy a 
+                        condition st by the argument function </p>
+                    <h4>Syntax</h4>
+                    <div class="highlight">
+                        var newArray=arr.filter(arg_function[, this_arg]);
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-sm-3">
+                    
+
+                    <div class="form-group">
+                        <label>Multiply with</label>
+                        <input type="text" class="form-control" id="multiplayVal" value="">
+                      </div>
+                    
+                </div> -->
+              
+
+
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> Array</label>
+                                <p>[1,6,8,45,78,3,56,23,53]</p>
+                         </div>
+                   
+                </div>
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> Array</label>
+                                <p id="res-block"></p>
+                         </div>
+                   
+                </div>
+              
+            </div>
+           
+    </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+        var x=[1,6,8,45,78,3,56,23,53]
+        function isEven(value)
+        {
+            return value%2 == 0;
+        }        
+        function fun(){
+            var filtered=x.filter(isEven);
+            document.getElementById("res-block").innerHTML="["+filtered+"]";
+        }   
+        fun();
+        
+        </script>
+</body>
+</html>

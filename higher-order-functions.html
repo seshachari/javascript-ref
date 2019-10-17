@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>function</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Functions</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                 
+                </div>
+            </div>
+    </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            // setTimeout(function(){
+            //     console.log("This function called as a higher order functions");
+            // },4000);
+
+            function printVal(){
+                return (function(){
+                    console.log("Hello this new type of example higher order function");
+                })();
+            }
+            var x=printVal();
+            console.log(x);
+            console.log("----------------------------------------------------------");
+
+            function add(a,b){
+                return a+b;
+            }
+            var z=add(10,20);
+            console.log(z);
+            var res=z*z;
+            console.log(res);
+            //-------------------------------------------------------------------------
+            function abc(){
+                return function(){
+                    console.log("Hello Higher Order function ");
+                }
+            }    
+
+            var y=abc();
+            var res2=y();
+            console.log(res2);
+        </script>
+</body>
+</html>

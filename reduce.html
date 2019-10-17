@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>reduce</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+        .highlight{     margin-bottom: 1rem;  background-color: #f7f7f9;     padding: 1.5rem;}
+     h4 {  font-size: 16px; color: #0062cc; }
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Array reduce() Method</h2>
+                    <p>
+                        The reduce method in JavaScript is used to reduce the array to single value and executes aprovided function for each value of the array(from left to right)
+                        and the return value of the function is stored in accumulator.    
+                    </p>
+                    <h4>Syntax</h4>
+                    <div class="highlight">
+                        array.reduce( function (total, currentValue, Index, array), initialValue );
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-12">
+                    <h4>Example</h4>
+               </div>
+                  
+
+
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> Array</label>
+                                <p>[10, 20, 30, 40, 50, 60]</p>
+                         </div>
+                   
+                </div>
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> Reduce Output</label>
+                                <p id="res-block"></p>
+                         </div>
+                   
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-default" onclick="reduceMethod()">Click here</button>
+                </div>
+                <div class="col-sm-12"><hr></div>
+             
+              
+            </div>
+            <div class="row">
+                    <div class="col-sm-12">
+                            <h4>Example 2</h4>
+                       </div>
+            </div>
+            <div class="row">
+                    <div class="col-sm-3">
+                            <div class="form-group">
+                                    <label> Array</label>
+                                    <p>[2.6, 20.3, 11.1, 40.7]</p>
+                             </div>
+                       
+                    </div>
+                    <div class="col-sm-3">
+                            <div class="form-group">
+                                    <label> Reduce Output</label>
+                                    <p id="res-block2"></p>
+                             </div>
+                       
+                    </div>
+                    <div class="col-sm-3">
+                            <button class="btn btn-default" onclick="reduceMethod2()">Click here</button>
+                        </div>
+            </div>
+            
+           
+    </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            var arr=[10,20,30,40,50,60];
+            function sumofArray(sum, num)
+            {
+                return sum+num;
+            }
+            function reduceMethod(item){
+                document.getElementById("res-block").innerHTML=arr.reduce(sumofArray);
+            }
+
+            var abc=[2.6, 20.3, 11.1, 40.7];
+            function sumofArrayMath(sum, num)
+            {
+                return sum+Math.round(num);
+            }
+
+            function reduceMethod2(item)
+            {
+                document.getElementById("res-block2").innerHTML=abc.reduce(sumofArrayMath, 0);
+            }
+
+
+
+        </script>
+</body>
+</html>

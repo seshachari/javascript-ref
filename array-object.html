@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Array Object</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Array Object</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    
+                 
+                </div>
+            </div>
+
+          
+
+            
+               
+              
+                  
+                  
+                  
+                   
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            var emp=["Naresh","Mallesh", "Chari","Govind", "Sravanthi"];
+            var emailId=["naresh@rpwebapps.com","mallesh@rpwebapps.com","chari@rpwebapps.com","govind@rpwebapps.com" ];
+            var empId=["rp001","rp002"];
+            var employee=emp.concat(emailId, empId);
+            var fruits=["Banana", "Orange", "Apple", "Mango"];
+            function empnames(names) {
+                return names == "Naresh";
+            }
+
+            console.log(emp);
+            console.log("-----------------------------------------------------");
+            console.log(emailId);
+            console.log("-----------------------------------------------------");
+            console.log(typeof(emp));
+            console.log("-----------------------------------------------------");
+            console.log(employee);
+            console.log(employee.length);
+           console.log(employee.constructor);
+           console.log(fruits.copyWithin(2,0));
+           console.log("-----------------------------------------------------");
+           console.log(emp.copyWithin(1,0));
+           console.log("-----------------------------------------------------");
+           console.log(emp.entries());
+           console.log("-----------------------------------------------------");
+           console.log(emp.every());
+
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>sort</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+        .highlight{     margin-bottom: 1rem;  background-color: #f7f7f9;     padding: 1.5rem;}
+     h4 {  font-size: 16px; color: #0062cc; }
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>sort</h2>
+                    <p>
+                        The sort() method sorts an array alphabetically: 
+                    </p>
+                    <h4>Syntax</h4>
+                    <div class="highlight">
+                        array.sort( );
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-12">
+                    <h4>Example</h4>
+               </div>
+                  
+
+
+                <div class="col-sm-3">
+                        <div class="form-group">
+                                <label> Array</label>
+                                <p id="res-block"></p>
+                         </div>
+                   
+                </div>
+               
+                <div class="col-sm-3">
+                    <button class="btn btn-default" onclick="sortMethod()">Click here</button>
+                </div>
+                <div class="col-sm-12"><hr></div>
+             
+              
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                     <h4>Example</h4>
+                </div>
+                   
+ 
+ 
+                 <div class="col-sm-12">
+                         <div class="form-group">
+                                 <label> Array</label>
+                                 <p id="emp-block"></p>
+                          </div>
+                    
+                 </div>
+                
+                 <div class="col-sm-3">
+                     <button class="btn btn-default" onclick="sortMethodEmp()">Click here</button>
+                 </div>
+                 <div class="col-sm-12"><hr></div>
+              
+               
+             </div>
+           
+           
+            
+           
+    </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+         var numbers=[40, 100, 1, 5, 25, 10];
+            document.getElementById("res-block").innerHTML=numbers;
+            function sortMethod(){
+             numbers.sort(function(a,b){return a-b});
+             document.getElementById("res-block").innerHTML=numbers;
+            }       
+
+        //--------------------------------------------------
+        
+        var emp=[{"name":"Naresh", "age":32},{"name":"Mallesh", "age":38}, {"name":"Chari", "age":27}, {"name":"Govind", "age":28}];
+        document.getElementById("emp-block").innerHTML=JSON.stringify(emp);;
+        function sortMethodEmp(){
+         var abc=emp.sort(function(a,b){return a.age-b.age});
+            
+            document.getElementById("emp-block").innerHTML=JSON.stringify(abc);
+            console.log(emp);
+        }
+
+        </script>
+</body>
+</html>

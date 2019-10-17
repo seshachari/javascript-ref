@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>setInterval</title>
+</head>
+
+<body>
+
+    <h2>setInterval()</h2>
+    <p>It it used </p>
+  
+    <script>
+        window.setInterval(showSysDate,5000);
+        function showSysDate(){
+            console.log(new Date().toLocaleDateString());
+            console.log("--------------------------------------");
+            console.log(new Date().toLocaleTimeString());
+            console.log("--------------------------------------");
+        }
+      
+     
+    </script>
+</body>
+
+
+</html>
